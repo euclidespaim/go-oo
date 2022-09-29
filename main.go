@@ -2,17 +2,22 @@ package main
 
 import "fmt"
 
-func main() {
-	var titular string = "Elon Musk"
-	var numeroAgencia int = 589
-	var numeroConta int = 1234567
-	var saldo float64 = 273.15
+type ContaCorrente struct {
+	titular       string
+	numeroAgencia int
+	numeroConta   int
+	saldo         float64
+}
 
-	fmt.Println("=====================================")
-	fmt.Println("Titular da conta:", titular)
-	fmt.Println("Agência:", numeroAgencia)
-	fmt.Println("Conta:", numeroConta)
-	fmt.Println("Saldo:", saldo)
-	fmt.Println("=====================================")
-	fmt.Println()
+func main() {
+	contaDoElon := ContaCorrente{
+		titular: "Elon Musk", 
+		numeroAgencia: 321, 
+		numeroConta: 1234567, 
+		saldo: 100.21,
+	}
+	fmt.Println(contaDoElon)
+
+	contaDoBezos := ContaCorrente{"Jeff Bezos", 123, 1234567, 200.00}
+	fmt.Println(contaDoBezos)
 }
