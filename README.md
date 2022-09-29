@@ -4,13 +4,13 @@ Projeto desenvolvido para estudos da linguagem [Go](https://go.dev/doc/) utiliza
 
 ## O que aprendemos
 
-- [x] Conceitos de Orientação a Objetos
+- #### Conceitos de Orientação a Objetos
 
 Criamos um novo tipo de estrutura de dados para representar um objeto, chamado de struct. Essa estrutura de dados é composta por campos, que são variáveis que pertencem a um struct. Cada campo pode ser de um tipo diferente, e um struct pode ter vários campos.
 
 Podemos instanciar esta nova classe utilizando atribuição curta.
 
-- ### [x] inicialização zero e nil
+- #### inicialização zero e nil
 
 Mesmo não provendo nenhum valor, o Go garante inicializar todas as variáveis, conforme a imagem abaixo:
 
@@ -20,7 +20,7 @@ A inicialização zero é o valor padrão de um tipo de dado. Por exemplo, o val
 
 Porém, em muitas linguagens existe uma maneira de denotar um ponteiro nulo que, essencialmente, não aponta para nenhum lugar. Por exemplo: em C é **NULL**, em Python é **None** e em java é **null**. Em Go, temos o **nil**.
 
-- ### [x] Conceitos de ponteiros e referências 
+- #### Conceitos de ponteiros e referências 
 
 Um ponteiro é um valor que armazena o endereço de memória de outra variável. Em Go, um ponteiro é representado pelo operador **&**. Por exemplo, se quisermos obter o endereço de memória de uma variável, podemos fazer: 
 
@@ -29,7 +29,7 @@ var x int = 1
 p := &x
 ```
 
-O operador **&** é chamado de operador de referência, pois ele retorna o endereço de memória de uma variável. O operador **&** é chamado de operador de referência, pois ele retorna o endereço de memória de uma variável. 
+O operador **&** é chamado de operador de referência, pois ele retorna o endereço de memória de uma variável. 
 
 O operador asterisco **\*** é chamado de operador de desreferência, pois ele retorna o valor armazenado no endereço de memória apontado por um ponteiro. Por exemplo, se quisermos obter o valor armazenado no endereço de memória de uma variável, podemos fazer: 
 
@@ -39,6 +39,6 @@ p := &x
 fmt.Println(*p) // 1
 ```
 
-- ### [x] Conceitos de encapsulamento
+- #### Conceitos de encapsulamento
 
-- [x] Conceitos de Herança
+- #### Conceitos de Herança
