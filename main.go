@@ -20,4 +20,10 @@ func main() {
 
 	contaDoBezos := ContaCorrente{"Jeff Bezos", 123, 1234567, 200.00}
 	fmt.Println(contaDoBezos)
+
+	var contaDoStark *ContaCorrente
+	contaDoStark = new(ContaCorrente)
+	contaDoStark.titular = "Tony Stark"
+	contaDoStark.numeroAgencia = 123
+	fmt.Println(contaDoStark)
 }
