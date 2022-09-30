@@ -48,3 +48,17 @@ fmt.Println(*p) // 1
 Em Go, não existe a palavra reservada **private** ou **public**. Porém, é possível simular o conceito de encapsulamento utilizando a convenção de que um campo de um struct começa com letra maiúscula se ele for público e com letra minúscula se ele for privado.
 
 - #### Conceitos de Herança
+
+Em Go, não existe a palavra reservada **extends**. Porém, é possível simular o conceito de herança utilizando a composição de structs. Por exemplo, se quisermos criar uma classe **Pessoa** e uma classe **Aluno** que herda de **Pessoa**, podemos fazer: 
+
+```go
+type Pessoa struct {
+  nome string
+}
+
+type Aluno struct {
+  Pessoa
+}
+```
+
+- #### Conceitos de Polimorfismo
