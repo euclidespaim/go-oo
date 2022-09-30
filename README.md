@@ -8,9 +8,13 @@ Projeto desenvolvido para estudos da linguagem [Go](https://go.dev/doc/) utiliza
 
 Criamos um novo tipo de estrutura de dados para representar um objeto, chamado de struct. Essa estrutura de dados é composta por campos, que são variáveis que pertencem a um struct. Cada campo pode ser de um tipo diferente, e um struct pode ter vários campos.
 
-Podemos instanciar esta nova classe utilizando atribuição curta.
+Podemos instanciar esta nova classe utilizando atribuição curta. A sintaxe é a seguinte:
 
-- #### inicialização zero e nil
+```go
+var nomeDaInstancia NomeDaClasse
+```
+
+- #### Inicialização zero e **nil**
 
 Mesmo não provendo nenhum valor, o Go garante inicializar todas as variáveis, conforme a imagem abaixo:
 
@@ -40,5 +44,7 @@ fmt.Println(*p) // 1
 ```
 
 - #### Conceitos de encapsulamento
+
+Em Go, não existe a palavra reservada **private** ou **public**. Porém, é possível simular o conceito de encapsulamento utilizando a convenção de que um campo de um struct começa com letra maiúscula se ele for público e com letra minúscula se ele for privado.
 
 - #### Conceitos de Herança
