@@ -18,7 +18,7 @@ var nomeDaInstancia NomeDaClasse
 
 Mesmo não provendo nenhum valor, o Go garante inicializar todas as variáveis, conforme a imagem abaixo:
 
-![](img/smais_aula01.png)
+![](img/zero-init.png)
 
 A inicialização zero é o valor padrão de um tipo de dado. Por exemplo, o valor zero de um inteiro é 0, o valor zero de um float é 0.0, o valor zero de um boolean é false, o valor zero de um string é "".
 
@@ -72,7 +72,7 @@ module Projeto-Raiz
 
 - #### Conceitos de Polimorfismo
 
-Em Go, não existe a palavra reservada **implements**. Porém, é possível simular o conceito de polimorfismo utilizando interfaces. Por exemplo, se quisermos criar uma interface **Animal** e duas classes **Cachorro** e **Gato** que implementam a interface **Animal**, podemos fazer: 
+Em Go, não existe a palavra reservada **implements**. A linguagem Go não possui o conceito de classe. Em Go, definimos estruturas de dados em forma de `structs`. Porém, é possível simular o conceito de polimorfismo utilizando interfaces. Por exemplo, se quisermos criar uma interface **Animal** e duas classes **Cachorro** e **Gato** que implementam a interface **Animal**, podemos fazer: 
 
 ```go
 type Animal interface {
@@ -96,3 +96,4 @@ func (g Gato) falar() string {
 }
 ```
 
+![](img/go-lang.png)
