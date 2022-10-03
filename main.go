@@ -11,7 +11,7 @@ func main() {
 		Titular: clientes.Titular{
 			Nome:      "Elon Musk",
 			CPF:       "123.456.789-10",
-			Profissao: "Programador",
+			Profissao: "Desenvolvedor Go",
 		},
 		NumeroAgencia: 321,
 		NumeroConta:   1234567,

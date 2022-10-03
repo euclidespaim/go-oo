@@ -61,4 +61,38 @@ type Aluno struct {
 }
 ```
 
+### Utilizando módulos Locais
+
+Para utilizar módulos locais, é necessário criar um arquivo chamado **go.mod** na raiz do projeto. Esse arquivo deve conter o nome do módulo, que é o nome do projeto. Por exemplo, se o nome do projeto for **Projeto-Raiz**, o arquivo **go.mod** deve conter o seguinte conteúdo:
+
+```go
+module Projeto-Raiz
+```
+
+
 - #### Conceitos de Polimorfismo
+
+Em Go, não existe a palavra reservada **implements**. Porém, é possível simular o conceito de polimorfismo utilizando interfaces. Por exemplo, se quisermos criar uma interface **Animal** e duas classes **Cachorro** e **Gato** que implementam a interface **Animal**, podemos fazer: 
+
+```go
+type Animal interface {
+  falar() string
+}
+
+type Cachorro struct {
+  nome string
+}
+
+func (c Cachorro) falar() string {
+  return "Au Au"
+}
+
+type Gato struct {
+  nome string
+}
+
+func (g Gato) falar() string {
+  return "Miau"
+}
+```
+
