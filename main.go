@@ -19,16 +19,28 @@ func (c *ContaCorrente) Sacar(valorDoSaque float64) string {
 	}
 }
 
+func (c*ContaCorrente) Depositar (valorDoDeposito float64) string {
+	if valorDoDeposito > 0 {
+		c.saldo += valorDoDeposito
+		return "Depósito realizado com sucesso \n"
+	} else {
+		return "Valor do depósito menor que zero \n"
+	}
+}
+
 func main() {
 	contaDoElon := ContaCorrente{
-		titular: "Elon Musk", 
-		numeroAgencia: 321, 
-		numeroConta: 1234567, 
-		saldo: 100.21,
+		titular:       "Elon Musk",
+		numeroAgencia: 321,
+		numeroConta:   1234567,
+		saldo:         100.21,
 	}
 	fmt.Println(contaDoElon.Sacar(100))
 	fmt.Println("Saldo na conta do titular: ", contaDoElon.titular, "= ", contaDoElon.saldo)
 	fmt.Println()
+
+	contaDoElon.Depositar(300)
+	fmt.Println("Saldo na conta do titular: ", contaDoElon.titular, "= ", contaDoElon.saldo)
 
 	contaDoBezos := ContaCorrente{"Jeff Bezos", 123, 1234567, 200.00}
 	fmt.Println("Saldo na conta do titular: ", contaDoBezos.titular, "= ", contaDoBezos.saldo)
@@ -41,4 +53,3 @@ func main() {
 	fmt.Println(*contaDoStark)
 	fmt.Println()
 }
-
